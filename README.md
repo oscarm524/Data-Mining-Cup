@@ -10,4 +10,4 @@ Unfortunately, this loyal base of customers is not enough to make his business p
 
 Today, Johannes is looking for a reliable recommendation system to provide a targeted recommendation to every product page. This solution should meet his high personalization standards and only require a small amount of manual support to implement.
 
-
+## Data Mining Cup 2022 - Scenario
