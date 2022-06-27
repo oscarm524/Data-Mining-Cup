@@ -27,6 +27,12 @@ For a predefined subset of user and product combinations, the participants shall
 The prediction column in the ''submission.csv'' file must be filled accordingly.
 
 * 0 - no replenishment during that period
+* 1 - replenishment in the first week
+* 2 - replenishment in the second week
+* 3 - replenishment in the third week
+* 4 - replenishment in the fourth week
 
+The different columns are separated by the ''|'' symbol. A possible example of the solution file might
+look like this:
 
 
