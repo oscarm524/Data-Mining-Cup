@@ -22,3 +22,8 @@ Since the owners are only interested in the best possible solution, they organiz
 ## The Task
 The participating teams' goal is to predict the user-based replenishment of a product based on historical orders and item features. Individual items and user specific orders are given for the period between 01/06/2020 and 31/01/2021. The prediction period is between 01/02/2021 and 28/02/2021, which is exactly four weeks long.
 
+For a predefined subset of user and product combinations, the participants shall predict if and when a product will be purchased during the prediction period.
+
+The prediction column in the ''submission.csv'' file must be filled accordingly.
+
+
