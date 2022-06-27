@@ -35,7 +35,8 @@ The prediction column in the ''submission.csv'' file must be filled accordingly.
 The different columns are separated by the ''|'' symbol. A possible example of the solution file might
 look like this:
 
-userID|itemID|prediction 12|6723|0
+userID|itemID|prediction 
+12|6723|0
 20|8272|1
 28|9873|4
 ...
