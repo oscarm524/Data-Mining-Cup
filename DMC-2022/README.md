@@ -26,4 +26,7 @@ For a predefined subset of user and product combinations, the participants shall
 
 The prediction column in the ''submission.csv'' file must be filled accordingly.
 
+* 0 - no replenishment during that period
+
+
 
