@@ -20,4 +20,5 @@ By knowing the estimated week of replenishment, products can be added to the new
 Since the owners are only interested in the best possible solution, they organized a contest to benchmark competing prediction approaches.
 
 ## The Task
+The participating teams' goal is to predict the user-based replenishment of a product based on historical orders and item features. Individual items and user specific orders are given for the period between 01/06/2020 and 31/01/2021. The prediction period is between 01/02/2021 and 28/02/2021, which is exactly four weeks long.
 
