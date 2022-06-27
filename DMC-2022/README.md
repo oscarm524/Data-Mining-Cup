@@ -19,3 +19,5 @@ By knowing the estimated week of replenishment, products can be added to the new
 
 Since the owners are only interested in the best possible solution, they organized a contest to benchmark competing prediction approaches.
 
+## The Task
+
