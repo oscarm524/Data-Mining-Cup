@@ -51,4 +51,4 @@ user_item_surv = pd.merge(user_item_surv, knn_20_item_buy_freq, on = 'itemID', h
 user_item_surv = pd.merge(user_item_surv, knn_25_item_buy_freq, on = 'itemID', how = 'left')
 user_item_surv = pd.merge(user_item_surv, knn_30_item_buy_freq, on = 'itemID', how = 'left')
 
-user_item_surv.to_csv('survival_modeling_full_data.csv', index = False)
+user_item_surv.to_csv('survival_modeling_full_data_full_features_date.csv', index = False)
