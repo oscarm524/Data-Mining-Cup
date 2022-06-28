@@ -31,4 +31,24 @@ test['user_item'] = test['userID'].apply(str) + '_' + test['itemID'].apply(str)
 
 ## Features 1
 user_item_surv = Surv_Features_1(train, test)
+
+## Features 2
+item_buy_freq = Features_2(train)
+user_item_surv = pd.merge(user_item_surv, item_buy_freq, on = 'itemID', how = 'left')
+
+## Features 3
+knn_5_item_buy_freq = Features_3(train, item_buy_freq, 5)
+knn_10_item_buy_freq = Features_3(train, item_buy_freq, 10)
+knn_15_item_buy_freq = Features_3(train, item_buy_freq, 15)
+knn_20_item_buy_freq = Features_3(train, item_buy_freq, 20)
+knn_25_item_buy_freq = Features_3(train, item_buy_freq, 25)
+knn_30_item_buy_freq = Features_3(train, item_buy_freq, 30)
+
+user_item_surv = pd.merge(user_item_surv, knn_5_item_buy_freq, on = 'itemID', how = 'left')
+user_item_surv = pd.merge(user_item_surv, knn_10_item_buy_freq, on = 'itemID', how = 'left')
+user_item_surv = pd.merge(user_item_surv, knn_15_item_buy_freq, on = 'itemID', how = 'left')
+user_item_surv = pd.merge(user_item_surv, knn_20_item_buy_freq, on = 'itemID', how = 'left')
+user_item_surv = pd.merge(user_item_surv, knn_25_item_buy_freq, on = 'itemID', how = 'left')
+user_item_surv = pd.merge(user_item_surv, knn_30_item_buy_freq, on = 'itemID', how = 'left')
+
 user_item_surv.to_csv('survival_modeling_full_data.csv', index = False)
