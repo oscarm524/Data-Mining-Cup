@@ -92,7 +92,7 @@ def Surv_Features_1_submission(train):
         ## Computing frequency
         if (temp.shape[0] ==  1):
         
-            data_out.loc[i, 'Frequency'] = 31 
+            data_out.loc[i, 'Frequency'] = 35 
         
         else: 
             
