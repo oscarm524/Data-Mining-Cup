@@ -150,3 +150,50 @@ def Features_2(train):
             data_out.loc[i, 'Avg_Frequency'] = 31
         
     return data_out
+
+
+
+def Features_3(train, items_freq, numb_neighbors):
+    
+    ## Defining data to compute nearest-neighbors
+    knn_data_item = train[['itemID', 'feature_1', 'feature_2', 'feature_3', 'feature_4', 'feature_5']]
+    knn_data_item = knn_data_item.drop_duplicates().reset_index(drop = True)
+    n = knn_data_item.shape[0]
+    
+    ## Removing itemID
+    knn_data = knn_data_item.drop(columns = 'itemID') 
+    
+    ## Scaling the data
+    scaler = MinMaxScaler()
+    knn_data = scaler.fit_transform(knn_data)
+    
+    ## Running k-NN using numb_neighbors
+    nbrs = NearestNeighbors(n_neighbors = (numb_neighbors + 1), algorithm = 'ball_tree').fit(knn_data)
+    distances, indices = nbrs.kneighbors(knn_data)
+    
+    ## Defining the data-frame to be exported
+    data_out = pd.DataFrame({'itemID': knn_data_item['itemID']})
+    label = 'Avg_' + str(numb_neighbors) + '_neighbors_freq'
+    data_out[label] = np.nan
+    
+    for i in range(0, n):
+        
+        temp_data = knn_data_item.loc[indices[i]]
+        
+        to_check = np.isin(temp_data.index, i)
+        
+        if (sum(to_check) > 0):
+            
+            temp_data = temp_data[~to_check].reset_index(drop = True)
+            temp_data_freq = pd.merge(temp_data, items_freq, on = 'itemID', how = 'left')
+            
+            data_out.loc[i, label] = temp_data_freq['Avg_Frequency'].mean()
+            
+        else:
+            
+            temp_data = temp_data[0:numb_neighbors].reset_index(drop = True)
+            temp_data_freq = pd.merge(temp_data, items_freq, on = 'itemID', how = 'left')
+            
+            data_out.loc[i, label] = temp_data_freq['Avg_Frequency'].mean()
+            
+    return data_out
