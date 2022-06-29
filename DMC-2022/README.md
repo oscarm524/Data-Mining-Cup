@@ -42,7 +42,7 @@ look like this:
 **...**
 
 ## Feature Engineering 
-
+First we engineered two variables: 
 
 
 
