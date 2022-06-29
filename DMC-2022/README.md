@@ -59,3 +59,8 @@ First, we definied the training dataset (transaction no older than 01/31/2021). 
 
 ## Our Approach
 Since the goal is to predict time of event (predict when a customer will buy an specific item based on seven months of historical data), we consider a survival analysis model. In this case, we consider the survival random forest implementation from scikit-survival. For more info [click here](https://scikit-survival.readthedocs.io/en/stable/user_guide/random-survival-forest.html).
+
+In our approach:
+
+* **target_1** and **target_2** are the target variables. 
+* **weeks_to_magic_date**, **Frequency**, **Avg_Frequency**, **Avg_5_neighbors_freq**, **Avg_10_neighbors_freq**, **Avg_15_neighbors_freq**, **Avg_20_neighbors_freq**, **Avg_25_neighbors_freq**, **Avg_30_neighbors_freq** are the predictor variables.
