@@ -44,8 +44,15 @@ look like this:
 ## Feature Engineering 
 First, we definied the training dataset (transaction no older than 01/31/2021). After that we defined the *magic date* = 01/04/2021 (date that we used as reference). Notice the magic date is four weeks before the end of the training period. This is because the submission file is exactly four weeks after 01/31/2021. Then, we engineered three features: 
 
-* **Frequency**: the average number of weeks that a customer buys a particular item between 06/01/2020 to 01/04/2021.  
 * **weeks_to_magic_date**: the number of weeks from the last purchase (from 06/01/2020 to 01/04/2021) to magic date.
+* **Frequency**: the average number of weeks that a customer buys a particular item between 06/01/2020 to 01/04/2021.  
+* **Avg_Frequency**: the number of weeks that customers buys a particular item. 
+* **Avg_5_neighbors_freq**: the average number of weeks that customers buys a particular item based on the five nearest neighbors of the item. Notice that we identify the neighbors using 'feature_1', 'feature_2', 'feature_3', 'feature_4', 'feature_5'.
+* **Avg_10_neighbors_freq**: the average number of weeks that customers buys a particular item based on the ten nearest neighbors of the item. Notice that we identify the neighbors using 'feature_1', 'feature_2', 'feature_3', 'feature_4', 'feature_5'.
+* **Avg_15_neighbors_freq**: the average number of weeks that customers buys a particular item based on the fifteen nearest neighbors of the item. Notice that we identify the neighbors using 'feature_1', 'feature_2', 'feature_3', 'feature_4', 'feature_5'.
+* **Avg_20_neighbors_freq**: the average number of weeks that customers buys a particular item based on the twenty nearest neighbors of the item. Notice that we identify the neighbors using 'feature_1', 'feature_2', 'feature_3', 'feature_4', 'feature_5'.
+* **Avg_25_neighbors_freq**: the average number of weeks that customers buys a particular item based on the twenty five nearest neighbors of the item. Notice that we identify the neighbors using 'feature_1', 'feature_2', 'feature_3', 'feature_4', 'feature_5'.
+* **Avg_30_neighbors_freq**: the average number of weeks that customers buys a particular item based on the thirty nearest neighbors of the item. Notice that we identify the neighbors using 'feature_1', 'feature_2', 'feature_3', 'feature_4', 'feature_5'.
 * **target_1**: 1 if the customer buys the item, which was purchased between 06/01/2020 to 01/04/2021, between 01/04/2021 and 01/31/2021. Otherwise, 0. 
 * **target_2**: time in weeks from the from the last purchase (between 06/01/2020 to 01/04/2021) to latest purchase between 01/04/2021 and 01/31/2021. If there is no purchase between 01/04/2021 and 01/31/2021, time in weeks from the last purchase between 06/01/2022 to 01/04/2021 and 01/31/2021.
 
