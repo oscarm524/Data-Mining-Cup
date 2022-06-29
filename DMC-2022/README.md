@@ -58,3 +58,4 @@ First, we definied the training dataset (transaction no older than 01/31/2021). 
 
 
 ## Our Approach
+Since the goal is to predict time of event (predict when a customer will buy an specific item based on seven months of historical data), we consider a survival analysis model. In this case, we consider 
