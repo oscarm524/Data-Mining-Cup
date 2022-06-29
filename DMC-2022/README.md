@@ -42,10 +42,11 @@ look like this:
 **...**
 
 ## Feature Engineering 
-First we engineered two variables: 
+First, we definied the training dataset (transaction no older than 01/31/2021). After that we defined the *magic date* = 01/04/2021 (date that we used as reference). Notice the magic date is four weeks before the end of the training period. This is because the submission file is exactly four weeks after 01/31/2021. Then, we engineered three features: 
 
+* weeks_to_magic_date
 * target_1
-
+* target_2
 
 
 ## Our Approach
