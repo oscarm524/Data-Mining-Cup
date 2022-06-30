@@ -63,7 +63,7 @@ Since the goal is to predict time of event (predict when a customer will buy an 
 * **target_1** and **target_2** are the target variables. 
 * **weeks_to_magic_date**, **Frequency**, **Avg_Frequency**, **Avg_5_neighbors_freq**, **Avg_10_neighbors_freq**, **Avg_15_neighbors_freq**, **Avg_20_neighbors_freq**, **Avg_25_neighbors_freq**, **Avg_30_neighbors_freq** are the predictor variables.
 
-First, we tune the random survival forest model. The following hyper-parameters were tuned: 
+First, we split the data into training (80%) and testing (20%). After that, we tune the random survival forest model on the training dataset. The following hyper-parameters were tuned: 
 
 * n_estimators
 * min_samples_split
