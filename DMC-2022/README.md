@@ -70,4 +70,8 @@ First, we split the data into training (80%) and testing (20%). After that, we t
 * min_samples_leaf
 * max_depth
 
-Notice that the random survival forest predicts the risk score. 
+Notice that the random survival forest predicts the risk score. We then build two regression model to predict time from risk:
+
+* Random forest 
+* XGBoost
+
