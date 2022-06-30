@@ -75,3 +75,4 @@ Notice that the random survival forest predicts the risk score. We then build tw
 * Random forest 
 * XGBoost
 
+Both of the above models were tuned as well. Finally, we derive the replenishment label from the predicted time. 
